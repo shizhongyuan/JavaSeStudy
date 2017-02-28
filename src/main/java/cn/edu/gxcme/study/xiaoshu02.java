@@ -26,7 +26,7 @@ public class xiaoshu02 {
 
 
 
-      int [] arr={1,5,8,9,12,41,65,85,98,101,106};
+     /* int [] arr={1,5,8,9,12,41,65,85,98,101,106};
         int xx=xi(arr,65);
 
         System.out.println("xx="+xx);
@@ -48,7 +48,25 @@ public class xiaoshu02 {
             return mda;
         }
         return -1;
-    }
+      */
 
+
+
+
+Hello(60);
+
+    }
+static int Hello(int xiao) {            // 10进制表示16进制
+    for (int x = 0; x <= 8; x++)
+    {
+        int shu = xiao & 15;
+        if (shu >9)
+            System.out.println((char) (shu-10+'A'));
+        else
+            System.out.println(shu);
+        xiao = xiao >>> 4;
+    }
+    return xiao;
+}
 
 }
