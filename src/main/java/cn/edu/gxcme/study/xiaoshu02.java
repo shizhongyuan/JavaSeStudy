@@ -1,6 +1,8 @@
 package cn.edu.gxcme.study;
 
+import javax.print.DocFlavor;
 import java.io.FileOutputStream;
+import java.io.RandomAccessFile;
 
 /**
  * Created by Administrator on 2017/2/26 0026.
@@ -52,21 +54,38 @@ public class xiaoshu02 {
 
 
 
-
+    /*
 Hello(60);
 
     }
-static int Hello(int xiao) {            // 10进制表示16进制
-    for (int x = 0; x <= 8; x++)
+static int Hello(int xiao) {            // 10进制表示16进制       方法1
+    for (int x = 0; x < 8; x++)
     {
         int shu = xiao & 15;
         if (shu >9)
-            System.out.println((char) (shu-10+'A'));
+            System.out.print((char) (shu-10+'A'));
         else
-            System.out.println(shu);
+            System.out.print(shu);
         xiao = xiao >>> 4;
     }
     return xiao;
-}
+    */
+
+      HoHo(60);           //  10进制表示16进制       方法2
+
+    }
+
+    static void HoHo(int xixi) {
+        //定义一个对应关系表
+        char[] xx = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+            for (int x = 0; x < 8; x++) {
+                int dd = xixi & 15;
+                    System.out.print(xx[dd]);
+                xixi = xixi >>> 4;
+
+            }
+
+    }               // 注2进制 & 1   >>> 1         8进制  & 7   >>> 3
 
 }
