@@ -79,7 +79,8 @@ static int Hello(int xiao) {            // 10进制表示16进制       方法1
         //定义一个对应关系表
         char[] xx = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
-            for (int x = 0; x < 8; x++) {
+            for (int x = 0; x < 8; x++)
+            {
                 int dd = xixi & 15;
                     System.out.print(xx[dd]);
                 xixi = xixi >>> 4;
